@@ -1,0 +1,163 @@
+/* fonts cdn */
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+/* whole body */
+body{
+    background-color: rgb(132, 196, 196);
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+/* cointainer */
+.container{
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 10px;
+    border: 2px solid rgb(184, 120, 24);
+    border-radius: 10px;
+    box-shadow:8px 10px 10px  #888888;
+}
+
+.header{
+    width: 100%;
+    height: 20%;
+}
+/* display  */
+form{
+    display: flex;
+}
+/* text bar */
+#text-bar{
+    width: 100%;
+    height: 20%;
+    background-color: #888888;
+    border-radius: 15px;
+    font-size: xx-large;
+    border: none;
+    padding: 10px;
+}
+.icons{
+    font-size: x-large;
+}
+/* button inside textbar */
+#cross-btn{
+    border: none;
+    background-color: none;
+    margin-left:-5%;
+    width: 27px;
+    border-top-right-radius:13px ;
+    border-bottom-right-radius: 13px;
+
+}
+
+.task-status{
+    padding: 10px;
+    position: relative;
+    display: flex;
+    font-size: x-large;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #4DD0E1;
+}
+
+/* style of button below text bar */
+.btn-below-textbar{
+    border: none;
+    background-color:rgb(132, 196, 196) !important;
+    color: #888888;
+    cursor: pointer;
+}
+
+/* section part */
+#checkbox{
+    border-radius: 50px;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+.todo-list{
+    position: relative;
+    font-size:large;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: rgb(177, 82, 82);
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn, .complete-btn{
+    background-color:orangered ;
+    color:white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding:5px ;
+}
+
+.complete-btn{
+    background-color:green ;
+}
+
+.fa-check .fa-trash{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+    background-color: rgb(139, 79, 79) ;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* footer and button inside of it */
+.footer{
+    font-size: large;
+}
+
+
+.task-number-left{
+    display: inline;
+    padding: 5px;
+}
+
+.task-number-right{
+    display: flex;
+    float: right;
+}
+
+.seperate-list{
+    padding:5px 10px;
+}
+
+.darker{
+    color: black;
+}

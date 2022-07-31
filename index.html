@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- plugins and cdns -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css files -->
+    <link rel="stylesheet" href="/style.css">
+
+
+    <title>Todo App</title>
+</head>
+
+<body>
+    <!-- container -->
+    <div class="container">
+ <!-- textbar and complete task -->
+        <div>
+            <header class="header">
+
+                <form>
+                    <input type="text" id="text-bar" placeholder="   Type your todo item here" />
+                    <button id="cross-btn">
+                        <i class="fa-solid fa-circle-plus icon"></i>
+                    </button>
+                </form>
+
+                <div class="task-status">
+                    <button class="btn-below-textbar " id="add-btn">
+                        <i class="fa-solid fa-check-double"></i>
+                        Complete all tasks
+                    </button>
+                    <button class="btn-below-textbar">
+                        Clear completed
+                    </button>
+                </div>
+                <hr />
+            </header>
+        </div>
+
+<!-- ul list -->
+        <div>
+            <section class="section">
+                <ul class="todo-list">
+                </ul>
+                <hr />
+            </section>
+        </div>
+
+<!-- footer contains task left and other function -->
+        <div>
+            <footer class="footer">
+
+                <P class="task-number-left"> </P>
+
+                <div class="task-number-right">
+                    <button class="seperate-list btn-below-textbar darker">All</button>
+                    <button class="seperate-list btn-below-textbar"> In-complete</button>
+                    <button class="seperate-list btn-below-textbar"> completed</button>
+
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<!-- link with javascript code -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
