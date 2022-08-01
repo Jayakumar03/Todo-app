@@ -1,3 +1,5 @@
+// localStorage.clear();
+
 // TODO ITEMS
 var todoitems = 0;
 
@@ -34,9 +36,12 @@ function addTodo(event) {
     // create li
     const newTodo = document.createElement("li");
     newTodo.innerHTML = textBar.value;
+    if(textBar.value === ""){
+        alert("please enter the your task")
+    }else{
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
-    saveLocalTodo(textBar.value);
+    saveLocalTodo(textBar.value)
 
     // CHECK MARK BUTTON
     const completedButtom = document.createElement("button");
@@ -58,7 +63,7 @@ function addTodo(event) {
 
     // CLEAR TODO INPUT VALUE
     textBar.value = "";
-
+    }
    // CALL DISPLAY FUNCTION
 
 }
@@ -79,7 +84,7 @@ function deleteCheck(event) {
             trashButtonParent.remove();
         });
     }
-    deleteLocalTodo();
+    deleteLocalTodo(todo);
 }
 
 // FUNCTION FOR COMPLETED  CHECK
@@ -132,7 +137,7 @@ function filterTodo(event) {
 // FUNCTION FOR SAVING LOCAL
 function saveLocalTodo(todo) {
     // check if its already saved.
-    let todos;
+    let  todos;
     if(localStorage.getItem('todos') === null){
         todos= [];
 
@@ -148,7 +153,7 @@ function saveLocalTodo(todo) {
 function getTodoFromLocal() {
     let todos;
     if(localStorage.getItem('todos') === null){
-        todoS = [];
+        todos = [];
 
     }else{
         todos = JSON.parse(localStorage.getItem('todos'))
@@ -185,15 +190,16 @@ function getTodoFromLocal() {
 }
   // FUCTION TO DELETE THE ONJECTS IN LOCAL STORAGE
 function deleteLocalTodo() {
-    let todos;
+    let  todos;
     if(localStorage.getItem('todos') === null){
-        todoS = [];
+        todos = [];
 
     }else{
         todos = JSON.parse(localStorage.getItem('todos'))
     }
 
-    const todoIndex = todos.children[0].innerText;
+    let  todo;
+    const todoIndex = todo.children[0].innerText;
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem("todos", JSON.stringify(todos));
 }
@@ -213,3 +219,4 @@ function deleteLocalTodo() {
 //     const length = document.getElementsByClassName("todo").childElementCount;
 //     numberOfTaskRemaining.innertext = `${length} task left`;
 // }
+
